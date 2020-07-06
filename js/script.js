@@ -26,7 +26,7 @@ snake[0] = {
 
 document.addEventListener('keydown', direction);
 
-let dir;
+let dir = 'right';
 
 function direction(event) {
     if(event.keyCode == 37 && dir != 'right') {
@@ -77,7 +77,7 @@ function drawGame () {
             x: Math.floor(Math.random() * 17 + 1) * box, 
             y: Math.floor(Math.random() * 15 + 3) * box
         };
-    } else if(snake.length < 2 || snake.length >= 4){
+    } else if(snake.length > 2){
         snake.pop();
     }
 
