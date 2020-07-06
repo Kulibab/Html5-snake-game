@@ -77,7 +77,7 @@ function drawGame () {
             x: Math.floor(Math.random() * 17 + 1) * box, 
             y: Math.floor(Math.random() * 15 + 3) * box
         };
-    } else if(snake.length > 3){
+    } else if(snake.length >= 4){
         snake.pop();
     }
 
